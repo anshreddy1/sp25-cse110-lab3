@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- The "description" meta gives search engines and screen readers more context -->
+    <meta name="description" content="Meeting minutes for a CSE110 group meetings" />
+    <!-- Example: link to a small icon or favicon (replace path with your own, if you wish) -->
+    <link rel="icon" href="/Users/anshreddy/Downloads/CSE110/Screen Shot 2025-04-02 at 5.02.28 PM.png" />
+    
+    <title>CSE 110 Team Meeting - Project Phoenix</title>
+  </head>
+  <body>
+    <!-- Header section at the top -->
+    <header>
+      <h1>Project Phoenix Meeting Minutes</h1>
+      <nav>
+        <p>Quick Links:</p>
+        <ul>
+          <li><a href="#attendance">Attendance</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#media">Photos/Recordings</a></li>
+          <li><a href="#form-section">Feedback Form</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Main content of the page -->
+    <main>
+      <!-- Attendance Section -->
+      <section id="attendance">
+        <h2>Date & Attendance</h2>
+        <p><strong>Date:</strong> March 28, 2025</p>
+        <p><b>Time:</b> 5:00 PM - 6:00 PM</p>
+        <p>Attendees:
+          <ul>
+            <li><strong>Alice</strong> (Team Lead)</li>
+            <li><em>Bob</em></li>
+            <li><i>Charlie</i></li>
+            <li>Denise</li>
+            <li>Eric</li>
+          </ul>
+        </p>
+        <p>Absent: <b>Fiona</b> (Sick)</p>
+      </section>
+      
+      <hr />
+      
+      <!-- Agenda Section -->
+      <section id="agenda">
+        <h2>Agenda</h2>
+        
+        <h3>Old Business</h3>
+        <ul>
+          <li>Review of pull requests from last week</li>
+          <li>Update on user interface wireframes</li>
+        </ul>
+        
+        <h3>New Business</h3>
+        <ol>
+          <li>Finalize backend API endpoints</li>
+          <li>Discuss integration with ChatGPT plugin</li>
+          <li>Plan test cases for code coverage</li>
+          <li>Set sprint goals for next two weeks</li>
+        </ol>
+        
+        <p>
+          Team <span>Project Phoenix</span> is focusing on a 
+          <strong>scalable architecture</strong> that can handle high traffic.
+          We talked about using 
+          <a href="https://docs.github.com/en/actions" target="_blank">GitHub Actions</a>
+          for continuous integration.
+        </p>
+      </section>
+      
+      <hr />
+      
+      <!-- Discussion Notes -->
+      <section>
+        <h2>Discussion Notes</h2>
+        <p>
+          The majority of the meeting centered around how to split tasks between frontend and backend teams. 
+          We decided that the 
+          <i>frontend</i> will complete the new dashboard UI components by the end of this week, and the 
+          <em>backend</em> will focus on finalizing database schema changes.
+        </p>
+      </section>
+      
+      <hr />
+      
+      <!-- Media Section -->
+      <section id="media">
+        <h2>Photos & Recordings</h2>
+        
+        <!-- Whiteboard Image -->
+        <p>Here’s a snapshot of our whiteboard diagram discussing the new data flow:</p>
+        <img src="Screen Shot 2025-04-02 at 5.02.28 PM.png" alt="Whiteboard diagram illustrating data flow (just a picture of my dog)" />
+        
+        <br /><br />
+        
+        <!-- Audio Recording -->
+        <p>Audio Recording of Our Meeting</p>
+        <audio controls>
+          <source src="FROZEN  Let It Go Sing-along  Official Disney UK.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        
+        <br /><br />
+        
+        <!-- Video Recording -->
+        <p>Video Recording of Our Meeting</p>
+        <video width="320" height="240" controls>
+          <source src="videoplayback.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+      
+      <hr />
+      
+      <!-- Extra details using <details> and <summary> -->
+      <details>
+        <summary>Additional Notes</summary>
+        <p>We may invite the UX team next week to discuss new color schemes and branding guidelines.</p>
+      </details>
+      
+      <hr />
+      
+      <!-- Form Section -->
+      <section id="form-section">
+        <h2>Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+            
+            <!-- Text Input -->
+            <p>
+              <label for="name-input">Your Name:</label><br />
+              <input type="text" id="name-input" name="name-input" />
+            </p>
+            
+            <!-- Date Input -->
+            <p>
+              <label for="meeting-date">Meeting Date:</label><br />
+              <input type="date" id="meeting-date" name="meeting-date" />
+            </p>
+            
+            <!-- Radio Buttons -->
+            <p>How did you attend the meeting?</p>
+            <input type="radio" id="in-person" name="attendance" value="In-Person" />
+            <label for="in-person">In-Person</label>
+            <input type="radio" id="online" name="attendance" value="Online" />
+            <label for="online">Online</label>
+            
+            <!-- Checkboxes -->
+            <p>Topics that interested you:</p>
+            <input type="checkbox" id="frontend" name="topics" value="Frontend" />
+            <label for="frontend">Frontend</label><br />
+            <input type="checkbox" id="backend" name="topics" value="Backend" />
+            <label for="backend">Backend</label><br />
+            <input type="checkbox" id="test-automation" name="topics" value="TestAutomation" />
+            <label for="test-automation">Test Automation</label>
+            
+            <!-- Textarea -->
+            <p>
+              <label for="comments">Any additional comments:</label><br />
+              <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </p>
+            
+            <!-- Datalist -->
+            <p>
+              <label for="resources">Resources you’d like to explore:</label><br />
+              <input list="resource-options" id="resources" name="resources" />
+              <datalist id="resource-options">
+                <option value="Docker & Kubernetes"></option>
+                <option value="Cloud Services"></option>
+                <option value="CI/CD Pipelines"></option>
+              </datalist>
+            </p>
+            
+            <!-- Select/Option -->
+            <p>
+              <label for="next-meeting-topic">Pick a topic for next time:</label><br />
+              <select id="next-meeting-topic" name="next-meeting-topic">
+                <option value="">--Select--</option>
+                <option value="security">Security Best Practices</option>
+                <option value="deployment">Deployment Strategies</option>
+                <option value="ux-design">UX Design</option>
+              </select>
+            </p>
+            
+            <br />
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    
+    <!-- Footer at the bottom -->
+    <footer>
+      <hr />
+      <p>&copy; 2025 Project Phoenix. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
