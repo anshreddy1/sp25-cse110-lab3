@@ -18,8 +18,8 @@
         <ul>
           <li><a href="#attendance">Attendance</a></li>
           <li><a href="#agenda">Agenda</a></li>
-          <li><a href="#discussion-summary">Discussion Summary</a></li>
           <li><a href="#media">Photos/Recordings</a></li>
+          <li><a href="#form-section">Feedback Form</a></li>
         </ul>
       </nav>
     </header>
@@ -86,8 +86,8 @@
       </section>
       
       <hr />
-      
-      <!-- Discussion Summary (New Table) -->
+
+            <!-- Discussion Summary (New Table) -->
       <section id="discussion-summary">
         <h2>Discussion Summary</h2>
         <p>Below is a quick recap of centers/topics brought up and questions asked during the meeting:</p>
@@ -117,7 +117,66 @@
       </section>
       
       <hr />
+          <!-- Discussion Summary (New Table) -->
+      <section id="discussion-summary">
+        <h2>Discussion Summary</h2>
+        <p>Below is a quick recap of centers/topics brought up and questions asked during the meeting:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Center / Topic</th>
+              <th>Questions Raised</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Backend API Endpoints</td>
+              <td>How can we handle edge cases for authentication?</td>
+            </tr>
+            <tr>
+              <td>Database Schema Changes</td>
+              <td>Do we need a separate table for user preferences?</td>
+            </tr>
+            <tr>
+              <td>UI Components</td>
+              <td>Which design pattern should we follow for the new dashboard layout?</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       
+      <hr />
+      <!-- Discussion Summary (New Table) -->
+      <section id="discussion-summary">
+        <h2>Discussion Summary</h2>
+        <p>Below is a quick recap of centers/topics brought up and questions asked during the meeting:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Center / Topic</th>
+              <th>Questions Raised</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Backend API Endpoints</td>
+              <td>How can we handle edge cases for authentication?</td>
+            </tr>
+            <tr>
+              <td>Database Schema Changes</td>
+              <td>Do we need a separate table for user preferences?</td>
+            </tr>
+            <tr>
+              <td>UI Components</td>
+              <td>Which design pattern should we follow for the new dashboard layout?</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <hr />    
       <!-- Media Section -->
       <section id="media">
         <h2>Photos & Recordings</h2>
@@ -143,6 +202,86 @@
           <source src="videoplayback.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </section>
+      
+      <hr />
+      
+      <!-- Extra details using <details> and <summary> -->
+      <details>
+        <summary>Additional Notes</summary>
+        <p>We may invite the UX team next week to discuss new color schemes and branding guidelines.</p>
+      </details>
+      
+      <hr />
+      
+      <!-- Form Section -->
+      <section id="form-section">
+        <h2>Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+            
+            <!-- Text Input -->
+            <p>
+              <label for="name-input">Your Name:</label><br />
+              <input type="text" id="name-input" name="name-input" />
+            </p>
+            
+            <!-- Date Input -->
+            <p>
+              <label for="meeting-date">Meeting Date:</label><br />
+              <input type="date" id="meeting-date" name="meeting-date" />
+            </p>
+            
+            <!-- Radio Buttons -->
+            <p>How did you attend the meeting?</p>
+            <input type="radio" id="in-person" name="attendance" value="In-Person" />
+            <label for="in-person">In-Person</label>
+            <input type="radio" id="online" name="attendance" value="Online" />
+            <label for="online">Online</label>
+            
+            <!-- Checkboxes -->
+            <p>Topics that interested you:</p>
+            <input type="checkbox" id="frontend" name="topics" value="Frontend" />
+            <label for="frontend">Frontend</label><br />
+            <input type="checkbox" id="backend" name="topics" value="Backend" />
+            <label for="backend">Backend</label><br />
+            <input type="checkbox" id="test-automation" name="topics" value="TestAutomation" />
+            <label for="test-automation">Test Automation</label>
+            
+            <!-- Textarea -->
+            <p>
+              <label for="comments">Any additional comments:</label><br />
+              <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </p>
+            
+            <!-- Datalist -->
+            <p>
+              <label for="resources">Resources you’d like to explore:</label><br />
+              <input list="resource-options" id="resources" name="resources" />
+              <datalist id="resource-options">
+                <option value="Docker & Kubernetes"></option>
+                <option value="Cloud Services"></option>
+                <option value="CI/CD Pipelines"></option>
+              </datalist>
+            </p>
+            
+            <!-- Select/Option -->
+            <p>
+              <label for="next-meeting-topic">Pick a topic for next time:</label><br />
+              <select id="next-meeting-topic" name="next-meeting-topic">
+                <option value="">--Select--</option>
+                <option value="security">Security Best Practices</option>
+                <option value="deployment">Deployment Strategies</option>
+                <option value="ux-design">UX Design</option>
+              </select>
+            </p>
+            
+            <br />
+            <!-- Submit Button -->
+            <button type="submit">Submit Feedback</button>
+          </fieldset>
+        </form>
       </section>
     </main>
     
