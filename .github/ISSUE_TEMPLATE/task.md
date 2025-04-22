@@ -1,18 +1,16 @@
 ---
 name: Task
-about: A discrete piece of work for Lab 3
-title: "[Task] Create stand‑up template"
+about: A discrete piece of work for Lab 3
+title: "[Task] <concise summary>"
 labels: ["type:feature"]
-assignees: ["anshreddy1"]
+assignees: []
 ---
 
 ### What
-Create an initial `standup.md` file that the team will fill out during daily stand‑ups.
+<!-- short description -->
 
 ### Why
-Stand‑up notes keep everyone aligned on progress, blockers, and next steps.
+<!-- rationale -->
 
-### Acceptance Criteria
-- [ ] `standup.md` exists in the repo root
-- [ ] File contains a table with the columns *Yesterday*, *Today*, and *Blockers*
-- [ ] Committed, pushed, and merged via a PR linked to this issue
+### Acceptance Criteria
+- [ ] Unit / manual test describes “done”
