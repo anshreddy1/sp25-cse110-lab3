@@ -1,104 +1,126 @@
 /* ---------- VARIABLES & COLOR‑MIX (Issue #3) ---------- */
-:root{
-    --brand-color:black;
-    --gap:1rem;
+:root {
+    --font-sans: 'Poppins', sans-serif;
+    --font-serif: 'Merriweather', serif;
+    --color-bg: #f9fafb;                          /* very light gray */
+    --brand-color: #1e3a8a;                       /* deep indigo */
+    --color-accent: #f87171;                      /* soft coral */
+    --color-text: #1f2937;                        /* dark slate */
+    --color-header-text: #ffffff;                 /* white */
+    --spacing: 1rem;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   body {
-    font-family: 'Poppins', sans-serif;             /* #15 */
-    color: var(--brand-color, red);              /* fallback */
-    background: color-mix(in srgb, var(--brand-color) 90%, white 10%);
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
   }
   
   /* ---------- BOX‑MODEL (Issue #4) ---------- */
-  .longhand{
-    margin-top:1rem;margin-right:2rem;margin-bottom:1rem;margin-left:2rem;
-    padding-top:10px;padding-right:20px;padding-bottom:10px;padding-left:20px;
-    border-style:solid;border-width:2px;border-color:#555;border-radius:8px;
+  .longhand {
+    margin-top: 1rem; margin-right: 2rem; margin-bottom: 1rem; margin-left: 2rem;
+    padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px;
+    border-style: solid; border-width: 2px; border-color: #2e3a59; border-radius: var(--radius);
   }
-  .shorthand{margin:1rem 2rem;padding:10px 20px;border:2px dashed #c60;border-radius:50%;}
+  .shorthand {
+    margin: 1rem 2rem; padding: 10px 20px;
+    border: 2px dashed #f87171; border-radius: 50%;
+  }
   
   /* ---------- UNIT DEMO (Issue #5) ---------- */
-  .rel1{width:50%;}
-  .rel2{font-size:1.5rem;}
-  .rel3{max-width:80vw;}
-  .abs1{margin-left:32px;}
-  .abs2{border-width:.25in;}
-  .abs3{letter-spacing:2pt;}
+  .rel1 { width: 50%; }
+  .rel2 { font-size: 1.5rem; }
+  .rel3 { max-width: 80vw; }
+  .abs1 { margin-left: 32px; }
+  .abs2 { border-width: 0.25in; }
+  .abs3 { letter-spacing: 2pt; }
   
   /* ---------- BACKGROUND COLOR FORMATS (Issue #6) ---------- */
-  .hex-bg{background:#FFA500;}
-  .rgba-bg{background:rgba(255,165,0,.4);}
-  .hsl-bg{background:hsla(39 100% 50% /.6);}
-  .mix-bg{background:color-mix(in srgb,#FFA500 70%,white 30%);}
+  .hex-bg { background: #2e3a59; }
+  .rgba-bg { background: rgba(248, 113, 113, 0.4); }
+  .hsl-bg { background: hsla(340, 90%, 67%, 0.6); }
+  .mix-bg { background: color-mix(in srgb, var(--color-accent) 70%, var(--color-bg) 30%); }
   
   /* ---------- TEXT STYLES (Issue #7) ---------- */
-  .text-color{color:mediumvioletred;}
-  .text-deco{text-decoration:underline double var(--brand-color,red);}
-  .text-align{text-align:center;}
+  .text-color { color: var(--brand-color); }
+  .text-deco { text-decoration: underline var(--color-accent); }
+  .text-align { text-align: center; }
   
   /* ---------- DISPLAY (Issue #8) ---------- */
-  .hide{display:none;}
-  .blk{display:block;}
-  .inline{display:inline;}
-  .ib{display:inline-block;}
+  .hide { display: none; }
+  .blk { display: block; }
+  .inline { display: inline; }
+  .ib { display: inline-block; }
   
   /* ---------- SIZING (Issue #9) ---------- */
-  .w-demo{width:250px;}
-  .h-demo{height:120px;}
-  .maxw-demo{max-width:600px;}
-  .minw-demo{min-width:200px;}
+  .w-demo { width: 250px; }
+  .h-demo { height: 120px; }
+  .maxw-demo { max-width: 600px; }
+  .minw-demo { min-width: 200px; }
   
   /* ---------- POSITIONING (Issue #10) ---------- */
-  .static-demo{position:static;}
-  .rel-demo{position:relative;top:10px;left:20px;}
-  .abs-demo{position:absolute;top:0;right:0;}
-  .fixed-demo{position:fixed;bottom:10px;right:10px;}
-  .sticky-demo{position:sticky;top:0;background:#fff;}
+  .static-demo { position: static; }
+  .rel-demo { position: relative; top: 10px; left: 20px; }
+  .abs-demo { position: absolute; top: 0; right: 0; }
+  .fixed-demo { position: fixed; bottom: 10px; right: 10px; }
+  .sticky-demo { position: sticky; top: 0; background: var(--color-header-text); }
   
   /* ---------- PSEUDO‑CLASSES (Issue #11) ---------- */
-  a:hover{color:var(--brand-color);}
-  button:active{transform:scale(.97);}
+  a:hover { color: var(--color-accent); }
+  button:active { transform: scale(0.97); }
   
   /* ---------- FLEXBOX TOOLBAR (Issue #12) ---------- */
-  .toolbar{
-    display:flex;
-    gap:var(--gap);
-    justify-content:space-between;
-    align-items:center;
+  .toolbar {
+    display: flex;
+    gap: var(--spacing);
+    justify-content: space-between;
+    align-items: center;
   }
-  .toolbar>div{flex:1 1 auto;text-align:center;}
+  .toolbar > div {
+    flex: 1 1 auto; text-align: center;
+    background: var(--brand-color);
+    color: var(--color-header-text);
+    padding: 0.5rem; border-radius: var(--radius);
+    transition: background 0.3s;
+  }
+  .toolbar > div:hover {
+    background: var(--color-accent);
+  }
   
   /* ---------- GRID GALLERY (Issue #13) ---------- */
-  .gallery{
-    display:grid;
-    gap:var(--gap);
-    grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
-    place-items:center;
+  .gallery {
+    display: grid;
+    gap: var(--spacing);
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    place-items: center;
   }
-  .gallery img{width:100%;max-width:140px;border-radius:6px;}
+  .gallery img {
+    width: 100%; max-width: 140px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
   
   /* ---------- MEDIA QUERY (Issue #14) ---------- */
-  @media (max-width:600px){
-    .sidebar{display:none;}
+  @media (max-width: 600px) {
+    .sidebar { display: none; }
   }
   
   /* ---------- SELECTOR ZOO (Issue #16) ---------- */
-  /* class */ .btn{padding:.5rem 1rem;}
-  /* ID */ #top-nav{background:#222;}
-  /* universal */ *{box-sizing:border-box;}
-  /* element */ p{line-height:1.6;}
-  /* attribute */ a[target="_blank"]{color:crimson;}
-  /* selector list */ h1,h2,h3{font-family:Georgia,serif;}
-  /* descendant */ .card p{margin:0;}
-  /* child */ ul>li{list-style:"✔ ";}
-  /* adjacent sibling */ h2+p{margin-top:0;}
-  /* general sibling */ h2~p{opacity:.8;}
-  /* combined */ button.cta{font-weight:700;}
+  /* class */ .btn { padding: 0.5rem 1rem; background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius); }
+  /* ID */ #top-nav { background: var(--brand-color); color: var(--color-header-text); }
+  /* universal */ * { box-sizing: border-box; }
+  /* element */ p { line-height: 1.6; }
+  /* attribute */ a[target="_blank"] { color: var(--color-accent); }
+  /* selector list */ h1, h2, h3 { font-family: var(--font-serif); color: var(--brand-color); }
+  /* descendant */ .card p { margin: 0; }
+  /* child */ ul > li { list-style: "✔ "; }
+  /* adjacent sibling */ h2 + p { margin-top: 0; }
+  /* general sibling */ h2 ~ p { opacity: 0.8; }
+  /* combined */ button.cta { font-weight: 700; background: var(--brand-color); color: var(--color-header-text); padding: 0.5rem 1rem; border-radius: var(--radius); }
   
   /* ---------- NEW SELECTORS (Issue #17) ---------- */
-  section:has(img){border-left:4px solid var(--brand-color);}
-  .card{
-    & h3{margin-top:0;}
-    &>p:first-of-type{font-weight:600;}
-  }
+  section:has(img) { border-left: 4px solid var(--color-accent); }
+  .card h3 { margin-top: 0; }
+  .card > p:first-of-type { font-weight: 600; }
   
