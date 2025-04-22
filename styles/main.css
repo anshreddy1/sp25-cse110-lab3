@@ -128,3 +128,6 @@
     color: red !important;
   }
   
+  html, body {
+    background: red !important;
+  }
