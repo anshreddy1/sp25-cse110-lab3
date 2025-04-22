@@ -4,26 +4,41 @@
     <meta charset="UTF-8" />
     <!-- The "description" meta gives search engines and screen readers more context -->
     <meta name="description" content="Meeting minutes for a CSE110 group meetings" />
-    <!-- Example: link to a small icon or favicon (replace path with your own, if you wish) -->
+    <!-- Example: link to a small icon or favicon -->
     <link rel="icon" href="whiteboard.png" />
-    
+
     <title>CSE 110 Team Meeting - Project Phoenix</title>
 
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- Google Font (Issue #15) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- internal stylesheet -->
+    <!-- external stylesheet (Issue #2) -->
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <!-- internal stylesheet (Issue #2) -->
     <style>
       .internal-demo {
         color: teal;
         font-weight: 600;
       }
     </style>
-    
   </head>
+
   <body>
     <!-- Header section at the top -->
     <header>
       <h1>Project Phoenix Meeting Minutes</h1>
+
+      <!-- FLEX toolbar demo (Issue #12) -->
+      <nav class="toolbar">
+        <div>Home</div>
+        <div>Docs</div>
+        <div>Contact</div>
+      </nav>
+
       <nav>
         <p>Quick Links:</p>
         <ul>
@@ -34,7 +49,17 @@
         </ul>
       </nav>
     </header>
-    
+
+    <!-- Sidebar demo (Issues #10 & #14) -->
+    <aside class="sidebar">
+      <p><strong>Sidebar</strong></p>
+      <ul>
+        <li><a href="#discussion-summary">Summary</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#form-section">Form</a></li>
+      </ul>
+    </aside>
+
     <!-- Main content of the page -->
     <main>
       <!-- Attendance Section -->
@@ -43,29 +68,28 @@
         <p><strong>Date:</strong> March 28, 2025</p>
         <p><b>Time:</b> 5:00 PM - 6:00 PM</p>
         <p>Attendees:</p>
-          <ul>
-            <li><strong>Alice</strong> (Team Lead)</li>
-            <li><em>Bob</em></li>
-            <li><i>Charlie</i></li>
-            <li>Denise</li>
-            <li>Eric</li>
-          </ul>
-        
+        <ul>
+          <li><strong>Alice</strong> (Team Lead)</li>
+          <li><em>Bob</em></li>
+          <li><i>Charlie</i></li>
+          <li>Denise</li>
+          <li>Eric</li>
+        </ul>
         <p>Absent: <b>Fiona</b> (Sick)</p>
       </section>
-      
+
       <hr />
-      
+
       <!-- Agenda Section -->
       <section id="agenda">
         <h2>Agenda</h2>
-        
+
         <h3>Old Business</h3>
         <ul>
           <li>Review of pull requests from last week</li>
           <li>Update on user interface wireframes</li>
         </ul>
-        
+
         <h3>New Business</h3>
         <ol>
           <li>Finalize backend API endpoints</li>
@@ -73,7 +97,7 @@
           <li>Plan test cases for code coverage</li>
           <li>Set sprint goals for next two weeks</li>
         </ol>
-        
+
         <p>
           Team <span>Project Phoenix</span> is focusing on a 
           <strong>scalable architecture</strong> that can handle high traffic.
@@ -82,9 +106,9 @@
           for continuous integration.
         </p>
       </section>
-      
+
       <hr />
-      
+
       <!-- Discussion Notes -->
       <section>
         <h2>Discussion Notes</h2>
@@ -95,14 +119,14 @@
           <em>backend</em> will focus on finalizing database schema changes.
         </p>
       </section>
-      
+
       <hr />
 
-            <!-- Discussion Summary (New Table) -->
+      <!-- Discussion Summary (New Table) -->
       <section id="discussion-summary">
         <h2>Discussion Summary</h2>
         <p>Below is a quick recap of centers/topics brought up and questions asked during the meeting:</p>
-        
+
         <table>
           <thead>
             <tr>
@@ -126,29 +150,40 @@
           </tbody>
         </table>
       </section>
-      
+
       <hr />
-        
-      <hr />    
+      <hr />
+
+      <!-- GRID gallery demo (Issue #13) -->
+      <section class="gallery">
+        <img src="whiteboard.png" alt="diagram" />
+        <img src="whiteboard.png" alt="diagram" />
+        <img src="whiteboard.png" alt="diagram" />
+      </section>
+
+      <!-- INTERNAL + INLINE CSS demos (Issue #2) -->
+      <p class="internal-demo">This line is styled by the INTERNAL &lt;style&gt; block.</p>
+      <p style="font-style: italic;">This sentence is styled INLINE.</p>
+
       <!-- Media Section -->
       <section id="media">
         <h2>Photos & Recordings</h2>
-        
+
         <!-- Whiteboard Image -->
         <p>Here’s a snapshot of our whiteboard diagram discussing the new data flow:</p>
         <img src="whiteboard.png" alt="Whiteboard diagram illustrating data flow (just a picture of my dog)" />
-        
+
         <br /><br />
-        
+
         <!-- Audio Recording -->
         <p>Audio Recording of Our Meeting</p>
         <audio controls>
           <source src="audio.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        
+
         <br /><br />
-        
+
         <!-- Video Recording -->
         <p>Video Recording of Our Meeting</p>
         <video width="320" height="240" controls>
@@ -156,43 +191,43 @@
           Your browser does not support the video tag.
         </video>
       </section>
-      
+
       <hr />
-      
+
       <!-- Extra details using <details> and <summary> -->
       <details>
         <summary>Additional Notes</summary>
         <p>We may invite the UX team next week to discuss new color schemes and branding guidelines.</p>
       </details>
-      
+
       <hr />
-      
+
       <!-- Form Section -->
       <section id="form-section">
         <h2>Feedback Form</h2>
         <form>
           <fieldset>
             <legend>Meeting Feedback</legend>
-            
+
             <!-- Text Input -->
             <p>
               <label for="name-input">Your Name:</label><br />
               <input type="text" id="name-input" name="name-input" />
             </p>
-            
+
             <!-- Date Input -->
             <p>
               <label for="meeting-date">Meeting Date:</label><br />
               <input type="date" id="meeting-date" name="meeting-date" />
             </p>
-            
+
             <!-- Radio Buttons -->
             <p>How did you attend the meeting?</p>
             <input type="radio" id="in-person" name="attendance" value="In-Person" />
             <label for="in-person">In-Person</label>
             <input type="radio" id="online" name="attendance" value="Online" />
             <label for="online">Online</label>
-            
+
             <!-- Checkboxes -->
             <p>Topics that interested you:</p>
             <input type="checkbox" id="frontend" name="topics" value="Frontend" />
@@ -201,24 +236,24 @@
             <label for="backend">Backend</label><br />
             <input type="checkbox" id="test-automation" name="topics" value="TestAutomation" />
             <label for="test-automation">Test Automation</label>
-            
+
             <!-- Textarea -->
             <p>
               <label for="comments">Any additional comments:</label><br />
               <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
             </p>
-            
+
             <!-- Datalist -->
             <p>
               <label for="resources">Resources you’d like to explore:</label><br />
               <input list="resource-options" id="resources" name="resources" />
               <datalist id="resource-options">
-                <option value="Docker & Kubernetes"></option>
+                <option value="Docker &amp; Kubernetes"></option>
                 <option value="Cloud Services"></option>
                 <option value="CI/CD Pipelines"></option>
               </datalist>
             </p>
-            
+
             <!-- Select/Option -->
             <p>
               <label for="next-meeting-topic">Pick a topic for next time:</label><br />
@@ -229,7 +264,7 @@
                 <option value="ux-design">UX Design</option>
               </select>
             </p>
-            
+
             <br />
             <!-- Submit Button -->
             <button type="submit">Submit Feedback</button>
@@ -237,7 +272,7 @@
         </form>
       </section>
     </main>
-    
+
     <!-- Footer at the bottom -->
     <footer>
       <hr />
