@@ -1,11 +1,11 @@
 /* ---------- VARIABLES & COLOR‑MIX (Issue #3) ---------- */
 :root{
-    --brand-color:hsl(24 90% 55%);
+    --brand-color:black;
     --gap:1rem;
   }
   body {
     font-family: 'Poppins', sans-serif;             /* #15 */
-    color: var(--brand-color, orange);              /* fallback */
+    color: var(--brand-color, red);              /* fallback */
     background: color-mix(in srgb, var(--brand-color) 90%, white 10%);
   }
   
